@@ -1,0 +1,17 @@
+{
+  "name": "jsonp",
+  "version": "0.1.0",
+  "authors": [
+    "cpryce <cpryce@digitalriver.com>"
+  ],
+  "description": "A jsonp client library",
+  "main": "jsonp/jsonp.js",
+  "license": "Apache 2.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
