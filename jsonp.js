@@ -12,9 +12,18 @@
  * Module definition
  * @dependencies Q or an other library that supports CommonJS Promises/A API
  */
-define(['q'], function (promisesLib) {
+
+(function (root, factory) {
+    if (typeof define === "function" && define.amd) {
+        define(["q/q"], factory);
+    } else if (typeof exports === "object") {
+        module.exports = factory(require("./q/q"));
+    } else {
+        root.jsonp = factory(root.q);
+    }
+}(this, function (promisesLib) {
     "use strict";
-    var jsonp = {
+    return {
         // to provide unique callback identifiers
         callbackCounter: 0,
 
@@ -104,5 +113,4 @@ define(['q'], function (promisesLib) {
             };
         }
     };
-    return jsonp;
-});
+}));
