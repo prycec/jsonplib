@@ -15,9 +15,9 @@
 
 (function (root, factory) {
     if (typeof define === "function" && define.amd) {
-        define(["q/q"], factory);
+        define(["q"], factory);
     } else if (typeof exports === "object") {
-        module.exports = factory(require("./q/q"));
+        module.exports = factory(require("q"));
     } else {
         root.jsonp = factory(root.q);
     }
