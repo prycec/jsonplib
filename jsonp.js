@@ -19,7 +19,7 @@
     } else if (typeof exports === "object") {
         module.exports = factory(require("q"));
     } else {
-        root.jsonp = factory(root.q);
+        root.jsonp = factory(root.Q);
     }
 }(this, function (promisesLib) {
     "use strict";

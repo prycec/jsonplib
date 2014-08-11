@@ -14,3 +14,7 @@ results
 npm-debug.log
 .idea
 q
+node_modules
+mocha
+chai
+requirejs
