@@ -51,8 +51,12 @@
 
             window[fn] = self.evalJSONP(defer);
 
-            // replace the callback name in the url with our own unique name
-            url = url.replace('=callback', '=' + fn);
+            // add or replace the callback name in the url with our own unique name
+            if (url.indexOf('callback=') !== -1) {
+                url = url.replace('=callback', '=' + fn);
+            } else {
+                url += (url.indexOf('?') !== -1 ? '&callback=' + fn : '?callback=' + fn);
+            }
 
             // append a script element to the document.
             scriptTag = document.createElement('SCRIPT');
