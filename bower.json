@@ -12,9 +12,17 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "mocha",
+    "chai",
+    "requirejs"
   ],
   "dependencies": {
     "q": "~1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.4",
+    "chai": "~1.9.1",
+    "requirejs": "~2.1.14"
   }
 }
